@@ -40,10 +40,10 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <div>{result}</div>
+    <div style={{ height:"100%",backgroundColor: "#f4f4f4" }}>
       <div>
-        <div>
+        <div style={{ marginTop: "15%" }}>{result}</div>
+        <div className="centered">
           <div>
             <TextInput
               value={animalInput}
@@ -53,19 +53,21 @@ export default function Home() {
               id="animal-input"
             />
           </div>
-          <Button
-            type="button"
-            icon={RefreshIcon}
-            iconPosition="left"
-            size="sm"
-            color="zinc"
-            variant="secondary"
-            onClick={onSubmit}
-            marginTop="mt-5"
-            loading={false}
-            loadingText="">
-            Execute
-          </Button>
+          <div>
+            <Button
+              type="button"
+              icon={RefreshIcon}
+              iconPosition="left"
+              size="sm"
+              color="zinc"
+              variant="secondary"
+              onClick={onSubmit}
+              marginTop="mt-5"
+              loading={false}
+              loadingText="">
+              Execute
+            </Button>
+          </div>
         </div>
       </div>
       <div></div>
